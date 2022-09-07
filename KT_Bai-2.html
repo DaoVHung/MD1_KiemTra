@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem Tra Canh Tam Giac</title>
+</head>
+<body>
+<h1>Nhập vào 3 cạnh để kiểm tra có phải tam giác vuông không !</h1>
+<p>Nhập vào các cạnh:</p>
+<p>Cạnh A</p>
+<input id="canhA" type="text" style="width: 50px">
+<p>Cạnh B</p>
+<input id="canhB" type="text" style="width: 50px">
+<p>Cạnh C</p>
+<input id="canhC" type="text" style="width: 50px">
+<br> <br>
+<button onclick="kiemTra()">Kiểm Tra</button>
+<p>Kết quả</p>
+<p id="hienThi"></p>
+<script>
+    /*Nếu một tam giác có bình phương một cạnh bằng tổng bình phương
+    hai cạnh còn lại thì tam giác đó là tam giác vuông.*/
+    function kiemTra() {
+        let a = +document.getElementById("canhA").value;
+        let b = +document.getElementById("canhB").value;
+        let c = +document.getElementById("canhC").value;
+        if (a + b > c && b + c > a && a + c > b) {
+            if (a > b && a > c) {
+                let x = Math.pow(a, 2)
+                let y = (Math.pow(b, 2) + Math.pow(c, 2))
+                if (x == y) {
+                    document.getElementById("hienThi").innerHTML = a + "," + b + "," + c + "," + " LÀ 3 cạnh của 1 Tam Giác Vuông!"
+                } else {
+                    document.getElementById("hienThi").innerHTML = a + "," + b + "," + c + "," + " KHÔNG PHẢI là cạnh của Tam Giác Vuông!"
+                }
+            } else if (b > a && b > c) {
+                let x = Math.pow(b, 2)
+                let y = (Math.pow(a, 2) + Math.pow(c, 2))
+                if (x == y) {
+                    document.getElementById("hienThi").innerHTML = a + "," + b + "," + c + "," + " LÀ 3 cạnh của 1 Tam Giác Vuông!"
+                } else {
+                    document.getElementById("hienThi").innerHTML = a + "," + b + "," + c + "" + " KHÔNG PHẢI là cạnh của Tam Giác Vuông!"
+                }
+            } else {
+                let x = Math.pow(c, 2)
+                let y = (Math.pow(a, 2) + Math.pow(b, 2))
+                if (x == y) {
+                    document.getElementById("hienThi").innerHTML = a + "," + b + "," + c + "," + " LÀ 3 cạnh của 1 Tam Giác Vuông!"
+                } else {
+                    document.getElementById("hienThi").innerHTML = a + "," + b + "," + c + "," + " KHÔNG PHẢI là cạnh của Tam Giác Vuông!"
+                }
+            }
+        }else {
+            document.getElementById("hienThi").innerHTML= " Đó KHÔNG PHẢI 3 cạnh của 1 TAM GIÁC!"
+        }
+    }
+
+
+</script>
+</body>
+</html>

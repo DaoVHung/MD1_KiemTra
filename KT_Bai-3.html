@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tuoi Can Chi</title>
+</head>
+<body>
+<h1>Nhập vào năm sinh để kiểm tra tuổi Can Chi</h1>
+<p>Tuổi của bạn là</p>
+<input id="soTuoi" type="text">
+<br><br>
+<button onclick="kiemTra()">Kiểm TRa</button>
+<p>Tuổi Can Chi của bạn là:</p>
+<p id="hienThi"></p>
+<script>
+    function kiemTra() {
+        let N = +document.getElementById("soTuoi").value;
+        let x = N % 10
+        let y = N % 12
+        let x1 = 0
+        let y1 = 0
+        switch (x) {
+            case 0:
+                x1 = "Canh"
+                break;
+            case 1:
+                x1 = "Tân"
+                break;
+            case 2:
+                x1 = "Nhâm"
+                break;
+            case 3:
+                x1 = "Quý"
+                break;
+            case 4:
+                x1 = "Giáp"
+                break;
+            case 5:
+                x1 = "Ất"
+                break;
+            case 6:
+                x1 = "Bính"
+                break;
+            case 7:
+                x1 = "Đinh"
+                break;
+            case 8:
+                x1 = "Mậu"
+                break;
+            case 9:
+                x1 = "Kỷ"
+                break;
+        }
+        console.log(x1)
+        switch (y) {
+            case 0:
+                y1 = "Thân"
+                break;
+            case 1:
+                y1 = "Dậu"
+                break;
+            case 2:
+                y1 = "Tuất"
+                break;
+            case 3:
+                y1 = "Hợi"
+                break;
+            case 4:
+                y1 = "Tý"
+                break;
+            case 5:
+                y1 = "Sửu"
+                break;
+            case 6:
+                y1 = "Dần"
+                break;
+            case 7:
+                y1 = "Mão"
+                break;
+            case 8:
+                y1 = "Thìn"
+                break;
+            case 9:
+                y1 = "Tỵ"
+                break;
+            case 10:
+                y1 = "Ngọ"
+                break;
+            case 11:
+                y1 = "Mùi"
+        }
+        console.log(y1)
+        document.getElementById("hienThi").innerHTML = x1 + " " + y1
+    }
+
+</script>
+</body>
+</html>

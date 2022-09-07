@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem Tra So Tuoi</title>
+</head>
+<body>
+<h1>Kiểm Tra Số Tuổi</h1>
+<p>Nhập vào số tuổi của em để in ra tuổi anh và tuổi bố !</p>
+<h3>Nhập số tuổi người em :</h3>
+<input type="text" style="width: 50px" id="tuoiEm">
+<br><br>
+<button onclick="tinh()">Tính tuổi anh và bố</button>
+<P>Tuổi anh là:</P>
+<p id="tuoiAnh"></p>
+<p>Tuổi bố là:</p>
+<p id="tuoiBo"></p>
+<script>
+  function tinh(){
+    let x=+document.getElementById("tuoiEm").value
+    let y=x+3;
+    let z=y*6
+    document.getElementById("tuoiAnh").innerHTML= y + ' tuổi.';
+    document.getElementById("tuoiBo").innerHTML= z + ' tuổi.';
+  }
+</script>
+</body>
+</html>
